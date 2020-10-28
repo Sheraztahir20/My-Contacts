@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        app:menu="@menu/bottom_nav"
+        android:background="#511CE6"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="#F5F5F8"
+        app:itemTextColor="#FBFAFD"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame"
+        android:background="@drawable/border"
+        android:layout_above="@id/bottom_nav">
+
+        <TextView
+            android:layout_width="164dp"
+            android:layout_height="61dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="About Us!"
+            android:textColor="#030204"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="301dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="In this  application you can contact your relatives,family and freinds We provide you this feature for free"
+            android:textColor="#030204"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/flipper"
+            android:autoStart="true"/>
+    </FrameLayout>
+
+
+
+</RelativeLayout>
